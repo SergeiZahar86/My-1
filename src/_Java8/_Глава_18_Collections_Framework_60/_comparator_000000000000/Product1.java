@@ -37,7 +37,7 @@ class Car implements Comparable <Car> {
         return this.speed - o.speed;
     }
 }
-class SortedByName1 implements Comparator<Car> {
+class SortedByName implements Comparator<Car> {
     @Override public int compare (Car o1, Car o2) {
         String str1 = o1.getName();
         String str2 = o2.getName();
@@ -71,7 +71,7 @@ class Example1 {
             System.out.println(car);
         }
         System.out.println("Сортировка по имени");
-        Collections.sort(cars, new SortedByName1());
+        Collections.sort(cars, new SortedByName());
         for (Car car : cars) {
             System.out.println(car);
         }

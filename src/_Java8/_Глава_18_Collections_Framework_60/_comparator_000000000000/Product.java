@@ -37,7 +37,7 @@ public class Product implements Comparable <Product> {
     }
 }
 // сортировка по названию
-class SortedByName implements Comparator <Product> {
+class SortedByName2 implements Comparator <Product> {
     public int compare (Product obj1, Product obj2) {
         String str1 = obj1.getName();
         String str2 = obj2.getName();
@@ -49,13 +49,7 @@ class SortedByPrice implements Comparator <Product> {
     public int compare (Product obj1, Product obj2) {
         int price1 = obj1.getPrice();
         int price2 = obj2.getPrice();
-        if (price1 > price2) {
-            return 1;
-        } else if (price1 < price2) {
-            return -1;
-        } else {
-            return 0;
-        }
+        return Integer.compare(price1, price2);
     }
 }
 class Example {
@@ -83,7 +77,7 @@ class Example {
             System.out.println(product);
         }
         // Сортировка по названию
-        Collections.sort(products, new SortedByName());
+        Collections.sort(products, new SortedByName2());
         System.out.println("\n~~~ сортировка по названию");
         for (Product product : products) {
             System.out.println(product);
