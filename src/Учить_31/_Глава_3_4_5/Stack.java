@@ -55,19 +55,19 @@ class Stack33 {
 class StackClon {
     int[] stck = new int[10];
     int tos;
-    StackClon () {
+    StackClon(){
         tos = -1;
     }
-    void push (int item) {
-        if (tos == 9) {
+    void push(int item){
+        if (tos == 9){
             System.out.println("Стек полон");
         } else {
-            stck[++tos] = item;
+            stck[++tos]=item;
         }
     }
-    int pop () {
-        if (tos < 0) {
-            System.out.println("Стек пустой");
+    int pop(){
+        if (tos < 0){
+            System.out.println("Стек пуст");
             return 0;
         } else {
             return stck[tos--];
@@ -78,19 +78,19 @@ class StackClon33 {
     void main1(){
         StackClon stackClon1 = new StackClon();
         StackClon stackClon2 = new StackClon();
-        for (int i = 0; i<10;i++){
+        for (int i = 0;i<10;i++){
             stackClon1.push(i);
         }
-        for (int i = 0; i<10; i++){
+        for (int i = 10;i<20;i++){
             stackClon2.push(i);
         }
         System.out.println("Содержимое stackClon1");
-        for (int i = 0; i<10;i++){
+        for (int i = 0;i<10;i++){
             System.out.print(stackClon1.pop());
-
         }
+        System.out.println();
         System.out.println("Содержимое stackClon2");
-        for (int i =0; i<10; i++){
+        for (int i = 0;i<10;i++){
             System.out.print(stackClon2.pop());
         }
     }

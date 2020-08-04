@@ -71,7 +71,7 @@ class Example {
             System.out.println(product);
         }
         // Сортировка по цене
-        Collections.sort(products, new SortedByPrice());
+        products.sort(new SortedByPrice());
         System.out.println("\n~~~ сортировка по цене");
         for (Product product : products) {
             System.out.println(product);

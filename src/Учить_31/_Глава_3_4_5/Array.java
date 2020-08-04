@@ -1,5 +1,5 @@
 package Учить_31._Глава_3_4_5;
-public class _Многомерный_массив2 {
+public class Array {
     public static void main (String[] args) {
         int[][] w = new int[4][];
         w[0] = new int[3];
@@ -26,21 +26,22 @@ public class _Многомерный_массив2 {
     }
 }
 class Clon {
-    void main1 () {
-        int[][] q = new int[3][];
-        q[0] = new int[4];
+    void main1(){
+        int[][] q = new int[4][];
+        q[0]= new int[4];
         q[1] = new int[4];
-        q[2] = new int[4];
-        int r, t, y = 0;
-        for (r = 0; r < q.length; r++) {
-            for (t = 0; t < q[r].length; t++) {
-                q[r][t] = y;
-                y++;
+        q[2]=new int[4];
+        q[3]=new int[4];
+        int e,r,t=0;
+        for (e=0;e< q.length;e++){
+            for (r=0;r<q[e].length;r++){
+                q[e][r]=t;
+                t++;
             }
         }
-        for (r = 0; r<q.length;r++){
-            for (t = 0; t < q[r].length; t++){
-                System.out.print(q[r][t] + " ");
+        for (e=0;e< q.length;e++){
+            for (r=0;r<q[e].length;r++){
+                System.out.print(q[e][r] + " ");
             }
             System.out.println();
         }

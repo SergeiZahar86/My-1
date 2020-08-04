@@ -1,8 +1,6 @@
 package Учить_31._Глава_3_4_5;
-public class for_each_Массивы {
+public class for_each {
     public static void main(String[] args) {
-        int[] numbers = new int[5];
-        numbers[0] = 10;
         String[] w = new String[3];
         w[0] = "привет";
         w[1] = "пока";

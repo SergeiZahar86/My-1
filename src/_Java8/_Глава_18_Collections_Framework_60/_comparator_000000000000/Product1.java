@@ -1,84 +1,77 @@
 package _Java8._Глава_18_Collections_Framework_60._comparator_000000000000;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-class Car implements Comparable <Car> {
+import java.util.*;
+class Car1 implements Comparable <Car1> {
     private String name;
     private int speed;
     private int quantity;
-    Car(String name, int speed, int quantity){
+    Car1 (String name, int speed, int quantity) {
         this.name = name;
         this.speed = speed;
         this.quantity = quantity;
     }
-    public String getName(){
+    public String getName () {
         return name;
     }
-    public int getSpeed(){
+    public int getSpeed () {
         return speed;
     }
-    public int getQuantity(){
+    public int getQuantity () {
         return quantity;
     }
-    public void setName(String name) {
+    public void setName (String name) {
         this.name = name;
     }
-    public void setSpeed(int speed){
+    public void setSpeed (int speed) {
         this.speed = speed;
     }
-    public void setQuantity(int quantity){
+    public void setQuantity (int quantity) {
         this.quantity = quantity;
     }
     @Override public String toString () {
-        return "Название " + name + " Скорость " + speed + " Пробег " + quantity;
+        return "Имя " + name + "Скорость " + speed + "Пробег " + quantity;
     }
-    @Override public int compareTo (Car o) {
-        return this.speed - o.speed;
-    }
-}
-class SortedByName implements Comparator<Car> {
-    @Override public int compare (Car o1, Car o2) {
-        String str1 = o1.getName();
-        String str2 = o2.getName();
-        return str1.compareTo(str2);
+    @Override public int compareTo (Car1 o) {
+        return this.getSpeed() - o.getSpeed();
     }
 }
-class SortedByQuantity1 implements Comparator<Car> {
-    @Override public int compare (Car o1, Car o2) {
-        int quantity1 = o1.getQuantity();
-        int quantity2 = o2.getQuantity();
-        if (quantity1 > quantity2){
-            return 1;
-        } else if (quantity1 < quantity2){
-            return -1;
-        }else return 0;
+class SortedByQuantity implements Comparator<Car1>{
+    @Override public int compare (Car1 o1, Car1 o2) {
+        Integer quantity1 = o1.getQuantity();
+        Integer quantity2 = o2.getQuantity();
+        return quantity1.compareTo(quantity2);
     }
 }
-class Example1 {
+class SortedByName implements Comparator<Car1>{
+    @Override public int compare (Car1 o1, Car1 o2) {
+        String name1 = o1.getName();
+        String name2 = o2.getName();
+        return name1.compareTo(name2);
+    }
+}
+class Example1{
     public static void main (String[] args) {
-        List<Car> cars = new ArrayList <>();
-        cars.add(new Car("Toyota", 180, 550));
-        cars.add(new Car("Porshe", 250, 200));
-        cars.add(new Car("BMW", 220, 300));
-        System.out.println("Без сортировки");
-        for (Car car : cars){
-            System.out.println(car);
+        ArrayList<Car1> car1s = new ArrayList <>();
+        car1s.add(new Car1("BMW", 250, 100000));
+        car1s.add(new Car1("Mersedes",240, 120000));
+        car1s.add(new Car1("AUDI", 260, 140000));
+        System.out.println("Машины без сортировки");
+        for (Car1 car1: car1s){
+            System.out.println(car1);
         }
         System.out.println("Сортировка по-умолчанию");
-        Collections.sort(cars);
-        for (Car car : cars) {
-            System.out.println(car);
+        Collections.sort(car1s);
+        for (Car1 car1:car1s){
+            System.out.println(car1);
         }
         System.out.println("Сортировка по имени");
-        Collections.sort(cars, new SortedByName());
-        for (Car car : cars) {
-            System.out.println(car);
+        car1s.sort(new SortedByName());
+        for (Car1 car1:car1s){
+            System.out.println(car1);
         }
         System.out.println("Сортировка по пробегу");
-        Collections.sort(cars, new SortedByQuantity1());
-        for (Car car : cars) {
-            System.out.println(car);
+        car1s.sort(new SortedByQuantity());
+        for (Car1 car1: car1s){
+            System.out.println(car1);
         }
     }
 }
