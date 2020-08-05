@@ -1,4 +1,4 @@
-package _Java8._Глава_18_Collections_Framework_60._594_000000;
+package _Java8._Глава_18_Collections_Framework_60._594_0000001;
 // Demonstrate iterators.
 import java.util.*;
 class IteratorDemo {

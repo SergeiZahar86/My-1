@@ -13,7 +13,7 @@ class AlgorithmsDemo {
         // Create a reverse order comparator.
         Comparator <Integer> r = Collections.reverseOrder();
         // Sort list by using the comparator.
-        Collections.sort(ll, r);
+        ll.sort(r);
         System.out.print("List sorted in reverse: ");
         for (int i : ll)
             System.out.print(i + " ");

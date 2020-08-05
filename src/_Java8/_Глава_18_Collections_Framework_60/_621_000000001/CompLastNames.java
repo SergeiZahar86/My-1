@@ -1,4 +1,4 @@
-package _Java8._Глава_18_Collections_Framework_60._621_00000000;
+package _Java8._Глава_18_Collections_Framework_60._621_000000001;
 import java.util.Comparator;
 import java.util.Map;
 import java.util.Set;

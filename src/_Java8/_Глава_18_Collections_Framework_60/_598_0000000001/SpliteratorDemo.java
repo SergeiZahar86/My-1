@@ -1,4 +1,4 @@
-package _Java8._Глава_18_Collections_Framework_60._598_000000000;
+package _Java8._Глава_18_Collections_Framework_60._598_0000000001;
 import java.util.ArrayList;
 import java.util.Spliterator;
 public class SpliteratorDemo {
@@ -18,7 +18,7 @@ public class SpliteratorDemo {
         while (spltitr.tryAdvance((n) -> sqrs.add(Math.sqrt(n))));
         System.out.println("Coдepжимoe списочного массива sqrs :\n");
         spltitr = sqrs.spliterator();
-        spltitr.forEachRemaining((n) -> System.out.println(n));
+        spltitr.forEachRemaining(System.out :: println);
         System.out.println();
     }
 }
