@@ -2,7 +2,7 @@ package _Java8._Глава_21_IO._800_Каталоги;
 import java.io.File;
 class DirList {
    public static void main (String args[]) {
-      String dirname = "C://Program Files/Java/jdk-14.0.1";
+      String dirname = "C://Program Files";
       File f1 = new File(dirname);
       if (f1.isDirectory()) {
          System.out.println("Directory of " + dirname);
@@ -11,7 +11,7 @@ class DirList {
          for (int i = 0; i < s.length; i++) {
             File f = new File(dirname + "/" + s[i]);
             if (f.isDirectory()) {
-               System.out.println(s[i] + " is a directory");
+               System.out.println(s[i] + " --  is a directory");
             } else {
                System.out.println(s[i] + " is a file");
             }
