@@ -3,22 +3,26 @@ package _Java8._Глава_28_параллелизм._9;
 import java.util.concurrent.*;
 class CallableDemo {
     public static void main (String[] args) {
-        ExecutorService es = Executors.newFixedThreadPool(3);
-        Future <Integer> f;
+        ExecutorService executorService = Executors.
+                newFixedThreadPool(3);
+        Future <Integer> f1;
         Future <Double> f2;
         Future <Integer> f3;
         System.out.println("Starting");
-        f = es.submit(new Sum(10));
-        f2 = es.submit(new Hypot(3, 4));
-        f3 = es.submit(new Factorial(5));
+        // submit - Отправляет на выполнение задачу,
+       // возвращающую значение, и
+       // возвращает Future
+        f1 = executorService.submit(new Sum(10));
+        f2 = executorService.submit(new Hypot(3, 4));
+        f3 = executorService.submit(new Factorial(5));
         try {
-            System.out.println(f.get());
+            System.out.println(f1.get());
             System.out.println(f2.get());
             System.out.println(f3.get());
         } catch (InterruptedException | ExecutionException exc) {
             System.out.println(exc);
         }
-        es.shutdown();
+        executorService.shutdown();
         System.out.println("Done");
     }
 }
