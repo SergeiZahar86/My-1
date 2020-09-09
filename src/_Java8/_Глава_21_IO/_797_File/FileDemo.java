@@ -18,5 +18,6 @@ class FileDemo {
       print(f1.isAbsolute() ? "is absolute" : "is not absolute"); // Проверяет, является ли этот абстрактный путь абсолютным. Определение абсолютного пути зависит от системы.
       print("File last modified: " + f1.lastModified()); //  Возвращает время последнего изменения файла, обозначенного этим абстрактным путем.
       print("File size: " + f1.length() + " Bytes");
+       System.out.println();
    }
 }
