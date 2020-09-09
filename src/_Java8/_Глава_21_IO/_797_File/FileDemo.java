@@ -19,6 +19,5 @@ class FileDemo {
       print("File last modified: " + f1.lastModified()); //  Возвращает время последнего изменения файла, обозначенного этим абстрактным путем.
       print("File size: " + f1.length() + " Bytes");
        System.out.println();
-       System.out.println();
    }
 }
