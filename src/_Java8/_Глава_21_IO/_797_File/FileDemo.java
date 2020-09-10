@@ -1,10 +1,12 @@
 package _Java8._Глава_21_IO._797_File;
+
 import java.io.File;
+
 class FileDemo {
-    static void print (String s) {
+    static void print(String s) {
         System.out.println(s);
     }
-    public static void main (String args[]) {
+    public static void main(String args[]) {
         File f1 = new File("/java/COPYRIGHT");
         print("File Name: " + f1.getName());
         print("Path: " + f1.getPath()); // Преобразует этот абстрактный путь в
