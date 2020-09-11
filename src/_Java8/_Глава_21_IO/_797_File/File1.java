@@ -11,5 +11,6 @@ public class File1 {
         print("Parent: " + file.getParent());
         print(file.exists() ? "exists" : "does not exist");
         print(file.canWrite() ? "is writeable" : "is not writeable");
+        print(file.canRead() ? "is readable" : "is not readable");
     }
 }
