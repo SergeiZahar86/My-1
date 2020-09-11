@@ -13,5 +13,11 @@ public class File1 {
         print(file.exists() ? "exists" : "does not exist");
         print(file.canWrite() ? "is writeable" : "is not writeable");
         print(file.canRead() ? "is readable" : "is not readable");
+        print("is " + (file.isDirectory() ? "" : "not" + " a directory"));
+        print(file.isFile() ? "is normal file" : "might be a named pipe");
+        print(file.isAbsolute() ? "is absolute" : "is not absolute");
+        print("File last modified: " + file.lastModified());
+        print("File size: " + file.length() + " Bytes");
+        System.out.println();
     }
 }
