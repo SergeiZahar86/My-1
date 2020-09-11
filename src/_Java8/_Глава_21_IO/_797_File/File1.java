@@ -7,6 +7,7 @@ public class File1 {
     public static void main (String[] args) {
         File file = new File("C://Empty folder/11.txt");
         print("File Name: " + file.getName());
+        print("Abs Path: " + file.getAbsolutePath());
 
     }
 }
