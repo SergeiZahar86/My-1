@@ -33,5 +33,6 @@ class FileDemo {
         // изменения файла, обозначенного этим абстрактным путем.
         print("File size: " + f1.length() + " Bytes");
         System.out.println();
+        System.out.println();
     }
 }
