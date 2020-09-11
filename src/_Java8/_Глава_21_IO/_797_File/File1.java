@@ -8,6 +8,6 @@ public class File1 {
         File file = new File("C://Empty folder/11.txt");
         print("File Name: " + file.getName());
         print("Abs Path: " + file.getAbsolutePath());
-
+        print("Parent: " + file.getParent());
     }
 }
