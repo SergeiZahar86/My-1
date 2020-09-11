@@ -10,5 +10,6 @@ public class File1 {
         print("Abs Path: " + file.getAbsolutePath());
         print("Parent: " + file.getParent());
         print(file.exists() ? "exists" : "does not exist");
+        print(file.canWrite() ? "is writeable" : "is not writeable");
     }
 }
