@@ -5,7 +5,8 @@ public class File1 {
         System.out.println(s);
     }
     public static void main (String[] args) {
-        File file = new File("C://Empty folder/11.txt");
+        //File file = new File("C://Empty folder/11.txt"); // для винды
+        File file = new File("/home/sergei/Документы/11"); // для Linux
         print("File Name: " + file.getName());
         print("Abs Path: " + file.getAbsolutePath());
         print("Parent: " + file.getParent());
