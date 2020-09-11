@@ -34,5 +34,6 @@ class FileDemo {
         print("File size: " + f1.length() + " Bytes");
         System.out.println();
         System.out.println();
+        System.out.println();
     }
 }
