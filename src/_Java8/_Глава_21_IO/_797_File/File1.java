@@ -19,5 +19,6 @@ public class File1 {
         print("File last modified: " + file.lastModified());
         print("File size: " + file.length() + " Bytes");
         System.out.println();
+        System.out.println();
     }
 }
