@@ -9,5 +9,6 @@ public class File1 {
         print("File Name: " + file.getName());
         print("Abs Path: " + file.getAbsolutePath());
         print("Parent: " + file.getParent());
+        print(file.exists() ? "exists" : "does not exist");
     }
 }
