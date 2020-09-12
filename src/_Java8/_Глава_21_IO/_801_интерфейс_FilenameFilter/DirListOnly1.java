@@ -4,6 +4,7 @@ import java.io.FilenameFilter;
 public class DirListOnly1 {
     public static void main (String[] args) {
         String dirname = "C://Program Files/Java/jdk-14.0.1/bin";
+
     }
 }
 class OnlyExt1 implements FilenameFilter {
@@ -12,6 +13,6 @@ class OnlyExt1 implements FilenameFilter {
         this.ext = ext;
     }
     @Override public boolean accept (File dir, String name) {
-        return false;
+        return name.endsWith(ext);
     }
 }
