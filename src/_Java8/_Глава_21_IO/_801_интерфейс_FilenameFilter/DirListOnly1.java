@@ -6,6 +6,12 @@ public class DirListOnly1 {
         String dirname = "C://Program Files/Java/jdk-11.0.8/bin";
         File f1 = new File(dirname);
         FilenameFilter only = new OnlyExt("exe");
+        String[] s = f1.list(only);
+        if (s != null) {
+            for (int i = 0; i < s.length; i++) {
+                System.out.println(s[i]);
+            }
+        }
     }
 }
 class OnlyExt1 implements FilenameFilter {
