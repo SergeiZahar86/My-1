@@ -3,7 +3,7 @@ import java.io.File;
 import java.io.FilenameFilter;
 public class DirListOnly1 {
     public static void main (String[] args) {
-        String dirname = "C://Program Files/Java/jdk-14.0.1/bin";
+        String dirname = "C://Program Files/Java/jdk-11.0.8/bin";
 
     }
 }
