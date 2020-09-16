@@ -8,8 +8,8 @@ class FileInputStreamDemo {
       int size;
       // Для автоматического закрытия потока ввода
       //используется оператор try с ресурсами
-      try (FileInputStream f = new FileInputStream("C://Users/serge" +
-              "/IdeaProjects/222/src/file")) {
+      try (FileInputStream f = new FileInputStream("C://Users/Sergei/IdeaProjects/" +
+              "My-1/file1.txt")) {
          System.out.println("Общее количество доступных байтов: " + (size =
                  f.available()));
          int n = size / 40;
